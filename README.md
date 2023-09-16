@@ -6,10 +6,10 @@ Esse é um exemplo de app para e-commerce focado em produtos de tecnologia, como
 
 ## Primeira fase do desenvolvimento
 
-- Criação da identidade visual e Design System
-- Criação da Home
-- Rotas de navegação
-- Detalhes completos dos produtos, incluindo imagens, especificações e preços.
+[x] Identidade visual e Design System
+[] Telas: Splash e Home
+[] Rotas de navegação
+[] Detalhes completos dos produtos, incluindo imagens, especificações e preços.
 
 ## Pré-requisitos
 
