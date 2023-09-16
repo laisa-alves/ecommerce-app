@@ -13,9 +13,9 @@ DaniTech é uma *loja ficticia*, criada para desenvolver esse **projeto pessoal*
 ## Primeira fase do desenvolvimento
 
 - [x] Identidade visual e Design System
-- [] Telas: Splash e Home
-- [] Rotas de navegação
-- [] Detalhes completos dos produtos, incluindo imagens, especificações e preços.
+- [_] Telas: Splash e Home
+- [_] Rotas de navegação
+- [_] Detalhes completos dos produtos, incluindo imagens, especificações e preços.
 
 ## Pré-requisitos
 
