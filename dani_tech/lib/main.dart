@@ -1,5 +1,7 @@
 import 'package:dani_tech/constants.dart';
+import 'package:dani_tech/routes.dart';
 import 'package:dani_tech/screens/splash_screen.dart';
+import 'package:dani_tech/size_config.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'DaniTech',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         fontFamily: 'Inter',
@@ -23,7 +26,8 @@ class MyApp extends StatelessWidget {
             bodyLarge: TextStyle(color: kTextColor)),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
