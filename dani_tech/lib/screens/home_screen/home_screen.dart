@@ -1,4 +1,7 @@
+import 'package:dani_tech/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:dani_tech/size_config.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,8 +9,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(),
       body: Container(
-        color: Colors.amber,
+        
       ),
     );
   }
