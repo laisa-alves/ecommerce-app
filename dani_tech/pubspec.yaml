@@ -37,6 +37,22 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
   provider: ^6.0.5
+  flutter_native_splash: ^2.3.2
+  flutter_launcher_icons: ^0.13.1
+
+flutter_native_splash:
+  color: '#5063BF'
+  image: 'assets/images/logo/splash.png'
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: 'assets/images/logo/app_icon_ios.png'
+  ios: true
+  remove_alpha_ios: true
+  android: 'laucher_icon'
+  adaptative_icon_background: '#FFFFFF'
+  adaptative_icon_foreground: 'assets/images/logo/app_icon_android.png'
 
 dev_dependencies:
   flutter_test:

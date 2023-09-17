@@ -1,6 +1,5 @@
 import 'package:dani_tech/constants.dart';
-import 'package:dani_tech/routes.dart';
-import 'package:dani_tech/screens/splash_screen.dart';
+import 'package:dani_tech/screens/home_screen/home_screen.dart';
 import 'package:dani_tech/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +25,7 @@ class MyApp extends StatelessWidget {
             bodyLarge: TextStyle(color: kTextColor)),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: SplashScreen.routeName,
-      routes: routes,
+      home: HomePage()
     );
   }
 }
