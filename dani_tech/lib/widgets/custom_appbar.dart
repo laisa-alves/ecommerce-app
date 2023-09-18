@@ -6,7 +6,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override
-  Size get preferredSize => Size.fromHeight(50);
+  Size get preferredSize => Size.fromHeight(70);
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         elevation: 0,
         scrolledUnderElevation: 1,
         flexibleSpace: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(24)),
+          padding: EdgeInsets.all(getProportionateScreenWidth(20)),
           child: SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  width: SizeConfig.screenWidth * 0.76,
+                  width: SizeConfig.screenWidth * 0.78,
                   height: getProportionateScreenHeight(34),
                   child: TextField(
                     style:
@@ -43,10 +42,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     cursorColor: kTextColor,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.shopping_cart_outlined),
-                  color: Colors.white,
+                Padding(
+                    padding:
+                        EdgeInsets.only(left: getProportionateScreenWidth(17))),
+                InkWell(
+                  onTap: () {},
+                  child: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: Colors.white,
+                    size: getProportionateScreenWidth(24),
+                  ),
                 )
               ],
             ),
