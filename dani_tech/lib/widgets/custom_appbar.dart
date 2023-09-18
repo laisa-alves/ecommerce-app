@@ -1,6 +1,7 @@
 import 'package:dani_tech/constants.dart';
 import 'package:dani_tech/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -21,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  width: SizeConfig.screenWidth * 0.78,
+                  width: SizeConfig.screenWidth * 0.8,
                   height: getProportionateScreenHeight(34),
                   child: TextField(
                     style:
@@ -42,17 +43,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     cursorColor: kTextColor,
                   ),
                 ),
-                Padding(
-                    padding:
-                        EdgeInsets.only(left: getProportionateScreenWidth(17))),
                 InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.shopping_cart_outlined,
-                    color: Colors.white,
-                    size: getProportionateScreenWidth(24),
-                  ),
-                )
+                    onTap: () {},
+                    child: SvgPicture.asset(
+                      'assets/icons/shopping-cart-solid.svg',
+                      height: getProportionateScreenHeight(30),
+                      colorFilter:
+                          ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    )
+
+                    // Icon(
+                    //   Icons.shopping_cart_outlined,
+                    //   color: Colors.white,
+                    //   size: getProportionateScreenWidth(24),
+                    // ),
+                    )
               ],
             ),
           ),
