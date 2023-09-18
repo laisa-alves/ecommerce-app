@@ -50,14 +50,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       height: getProportionateScreenHeight(30),
                       colorFilter:
                           ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                    )
-
-                    // Icon(
-                    //   Icons.shopping_cart_outlined,
-                    //   color: Colors.white,
-                    //   size: getProportionateScreenWidth(24),
-                    // ),
-                    )
+                    ))
               ],
             ),
           ),

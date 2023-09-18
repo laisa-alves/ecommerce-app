@@ -1,7 +1,6 @@
+import 'package:dani_tech/screens/home_screen/components/body.dart';
 import 'package:dani_tech/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:dani_tech/size_config.dart';
-
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,9 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Container(
-        
-      ),
+      body: Body(),
     );
   }
 }
