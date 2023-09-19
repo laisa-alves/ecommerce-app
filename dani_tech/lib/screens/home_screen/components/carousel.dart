@@ -8,6 +8,15 @@ class CarouselHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter();
+    return SliverToBoxAdapter(
+      child: Column(
+        children: [
+          SizedBox(
+            width: getProportionateScreenWidth(350),
+            height: getProportionateScreenHeight(171),
+          )
+        ],
+      ),
+    );
   }
 }
