@@ -22,22 +22,24 @@ class _CarouselHomeState extends State<CarouselHome> {
     return SliverToBoxAdapter(
       child: Column(
         children: [
-          SizedBox(
-            height: getProportionateScreenHeight(20),
-          ),
-          SizedBox(
-              width: getProportionateScreenWidth(350),
-              height: getProportionateScreenHeight(171),
-              child: PageView.builder(
-                itemCount: offersImages.length,
-                onPageChanged: (value) {
-                  setState(() {
-                    _currentImage = value;
-                  });
-                },
-                itemBuilder: (context, index) =>
-                    Image.asset(offersImages[index]),
-              ))
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: AspectRatio(
+                aspectRatio: 2,
+                child: PageView.builder(
+                    itemCount: offersImages.length,
+                    onPageChanged: (value) {
+                      setState(() {
+                        _currentImage = value;
+                      });
+                    },
+                    itemBuilder: (context, index) {
+                      return Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          child: Image.asset(offersImages[index]));
+                    })),
+          )
         ],
       ),
     );
