@@ -9,9 +9,9 @@ class _CarouselHomeState extends State<CarouselHome> {
   int _currentImage = 0;
 
   final List<String> offersImages = [
-    'images/home_banner/banner_tv.png',
-    'images/home_banner/banner_setup.png',
-    'images/home_banner/banner_celular.png'
+    './images/home_banner/banner_tv.png',
+    './images/home_banner/banner_setup.png',
+    './images/home_banner/banner_celular.png'
   ];
 
   @override
@@ -30,7 +30,6 @@ class _CarouselHomeState extends State<CarouselHome> {
                 child: AspectRatio(
                     aspectRatio: 2,
                     child: PageView.builder(
-                        
                         itemCount: offersImages.length,
                         onPageChanged: (value) {
                           setState(() {
