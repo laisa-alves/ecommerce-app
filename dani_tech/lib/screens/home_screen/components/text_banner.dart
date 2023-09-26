@@ -11,30 +11,23 @@ class TextBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      toolbarHeight: getProportionateScreenHeight(32),
+      toolbarHeight: 32,
       backgroundColor: kSecondaryColor,
       floating: true,
       flexibleSpace: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Padding(
-              padding: EdgeInsets.only(
-                  left: getProportionateScreenWidth(20),
-                  top: getProportionateScreenHeight(20),
-                  bottom: getProportionateScreenHeight(20))),
+          Padding(padding: EdgeInsets.only(left: 20, top: 20, bottom: 20)),
           SvgPicture.asset(
             'icons/map-marker-solid.svg',
-            height: getProportionateScreenHeight(20),
+            height: 20,
             colorFilter: ColorFilter.mode(Color(0xFF001F23), BlendMode.srcIn),
           ),
-          Padding(
-              padding: EdgeInsets.only(left: getProportionateScreenWidth(10))),
+          Padding(padding: EdgeInsets.only(left: 10)),
           Text(
             'Vila Velha, 29110-000',
             textAlign: TextAlign.left,
-            style: TextStyle(
-                color: Color(0xFF001F23),
-                fontSize: getProportionateScreenHeight(16)),
+            style: TextStyle(color: Color(0xFF001F23), fontSize: 16),
           ),
         ],
       ),

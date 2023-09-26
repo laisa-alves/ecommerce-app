@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                   flex: 1,
                   child: SizedBox(
-                    width: SizeConfig.screenWidth * 0.8,
+                    // width: SizeConfig.screenWidth * 0.8,
                     height: 34,
                     child: TextField(
                       style: TextStyle(fontSize: 16),
