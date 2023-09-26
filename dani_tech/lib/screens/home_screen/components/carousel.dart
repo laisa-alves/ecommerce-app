@@ -1,7 +1,4 @@
-import 'package:dani_tech/constants.dart';
-import 'package:dani_tech/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CarouselHome extends StatefulWidget {
   @override
@@ -22,24 +19,47 @@ class _CarouselHomeState extends State<CarouselHome> {
     return SliverToBoxAdapter(
       child: Column(
         children: [
+          // espaçamento
           SizedBox(height: 20),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: AspectRatio(
-                aspectRatio: 2,
-                child: PageView.builder(
-                    itemCount: offersImages.length,
-                    onPageChanged: (value) {
-                      setState(() {
-                        _currentImage = value;
-                      });
-                    },
-                    itemBuilder: (context, index) {
-                      return Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 5),
-                          child: Image.asset(offersImages[index]));
-                    })),
-          )
+
+          // criação do stack das imagens e do ponto identificador
+          Stack(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: AspectRatio(
+                    aspectRatio: 2,
+                    child: PageView.builder(
+                        
+                        itemCount: offersImages.length,
+                        onPageChanged: (value) {
+                          setState(() {
+                            _currentImage = value;
+                          });
+                        },
+                        itemBuilder: (context, index) {
+                          return Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 5),
+                              child: Image.asset(offersImages[index]));
+                        })),
+              ),
+              Positioned(
+                bottom: MediaQuery.of(context).size.height -
+                    (MediaQuery.of(context).size.height - 10),
+                left: MediaQuery.of(context).size.width / 2 - 4,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ...List.generate(offersImages.length,
+                        (index) => DotBuilder(isActive: index == _currentImage))
+                  ],
+                ),
+              )
+            ],
+          ),
+
+          // espaçamento
+          SizedBox(height: 20),
         ],
       ),
     );
@@ -57,6 +77,12 @@ class DotBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        margin: EdgeInsets.only(right: 5),
+        height: 8,
+        width: 8,
+        decoration: BoxDecoration(
+            color: isActive ? Color(0xFF745EE9) : Color(0xFFEBE8FC),
+            borderRadius: BorderRadius.circular(5)));
   }
 }

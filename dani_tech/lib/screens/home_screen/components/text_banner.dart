@@ -1,5 +1,4 @@
 import 'package:dani_tech/constants.dart';
-import 'package:dani_tech/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

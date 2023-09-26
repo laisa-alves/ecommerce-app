@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
       child: CustomScrollView(
         slivers: <Widget>[
           TextBanner(),
-          CarouselHome(),
+          CarouselHome(), 
         ],
       ),
     );
