@@ -17,7 +17,7 @@ class CustomTitle extends StatelessWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontWeight: FontWeight.w500,
-            fontSize: 14,
+            fontSize: 16,
           ),
         ),
       ),
