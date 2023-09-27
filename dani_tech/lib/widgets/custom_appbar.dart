@@ -34,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(100),
+                              borderRadius: BorderRadius.circular(999),
                               borderSide: BorderSide.none),
                           hintText: 'Buscar na DaniTech',
                           hintStyle: TextStyle(color: Color(0xFFBDBDBD))),

@@ -1,4 +1,3 @@
-import 'package:dani_tech/screens/home_screen/home_screen.dart';
 import 'package:dani_tech/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 

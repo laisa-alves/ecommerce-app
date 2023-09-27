@@ -19,14 +19,11 @@ class _CarouselHomeState extends State<CarouselHome> {
     return SliverToBoxAdapter(
       child: Column(
         children: [
-          // espaçamento
-          SizedBox(height: 20),
-
           // criação do stack das imagens e do ponto identificador
           Stack(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
                 child: AspectRatio(
                     aspectRatio: 2,
                     child: PageView.builder(
@@ -38,13 +35,13 @@ class _CarouselHomeState extends State<CarouselHome> {
                         },
                         itemBuilder: (context, index) {
                           return Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 5),
+                              padding: EdgeInsets.symmetric(horizontal: 6),
                               child: Image.asset(offersImages[index]));
                         })),
               ),
               Positioned(
                 bottom: MediaQuery.of(context).size.height -
-                    (MediaQuery.of(context).size.height - 10),
+                    (MediaQuery.of(context).size.height - 30),
                 left: MediaQuery.of(context).size.width / 2 - 4,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -78,8 +75,8 @@ class DotBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(right: 5),
-        height: 8,
-        width: 8,
+        height: 6,
+        width: 6,
         decoration: BoxDecoration(
             color: isActive ? Color(0xFF745EE9) : Color(0xFFEBE8FC),
             borderRadius: BorderRadius.circular(5)));
