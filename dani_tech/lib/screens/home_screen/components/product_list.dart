@@ -20,6 +20,7 @@ class ProductList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
+                          padding: EdgeInsets.all(4),
                           height: 150,
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -27,7 +28,7 @@ class ProductList extends StatelessWidget {
                             color: Color(0xFFF3F3F3),
                           ),
                           child: Image.asset(
-                            'images/products/iphone.jpg',
+                            'images/products/smart_tv.jpg',
                             fit: BoxFit.contain,
                           ),
                         ),
