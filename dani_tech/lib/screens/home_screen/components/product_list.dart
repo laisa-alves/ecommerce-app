@@ -28,7 +28,7 @@ class ProductList extends StatelessWidget {
                             color: Color(0xFFF3F3F3),
                           ),
                           child: Image.asset(
-                            'images/products/smart_tv.jpg',
+                            'images/products/iphone.jpg',
                             fit: BoxFit.contain,
                           ),
                         ),
