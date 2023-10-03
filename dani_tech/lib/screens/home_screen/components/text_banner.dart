@@ -2,6 +2,7 @@ import 'package:dani_tech/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// Informação do endereço de entrega ao pesquisar
 class TextBanner extends StatelessWidget {
   const TextBanner({
     super.key,

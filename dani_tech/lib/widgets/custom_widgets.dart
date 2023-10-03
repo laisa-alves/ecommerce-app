@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Cria títulos padrões entre os produtos - classe reutilizável
 class CustomTitle extends StatelessWidget {
   final String text;
   const CustomTitle({

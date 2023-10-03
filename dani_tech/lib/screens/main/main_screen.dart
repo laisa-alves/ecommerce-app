@@ -4,6 +4,7 @@ import 'package:dani_tech/screens/home_screen/home_screen.dart';
 import 'package:dani_tech/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
+// Navegação entre as páginas usando o NavBar
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -12,7 +13,10 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  // Estado inicial ao carregar o app - chamado para iniciar na home
   int defaultPageIndex = 0;
+
+  // Lista de navegação da navbar
   List<Widget> pageList = <Widget>[
     const HomeScreen(),
     const CategoriesScreen(),
@@ -23,11 +27,17 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+        // Comando para chamar o estado inicial - HomePage
         body: pageList[defaultPageIndex],
+
+        // Personalização
         bottomNavigationBar: NavigationBarTheme(
           data: const NavigationBarThemeData(
               labelTextStyle:
                   MaterialStatePropertyAll(TextStyle(fontFamily: 'Inter'))),
+
+          // Personalização dos ícones da navbar
           child: NavigationBar(
             destinations: const [
               NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
@@ -37,6 +47,8 @@ class _MainScreenState extends State<MainScreen> {
                   icon: Icon(Icons.favorite), label: 'Favoritos'),
               NavigationDestination(icon: Icon(Icons.person), label: 'Perfil'),
             ],
+
+            // Comando para alterar a página de acordo com o valor do index
             selectedIndex: defaultPageIndex,
             onDestinationSelected: (value) {
               setState(() {

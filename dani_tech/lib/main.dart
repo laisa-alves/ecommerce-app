@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // SizeConfig().init(context);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'DaniTech',

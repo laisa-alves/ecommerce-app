@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Display de promoções e destaques como carrosel de imagens
 class CarouselHome extends StatefulWidget {
   @override
   State<CarouselHome> createState() => _CarouselHomeState();
@@ -8,6 +9,7 @@ class CarouselHome extends StatefulWidget {
 class _CarouselHomeState extends State<CarouselHome> {
   int _currentImage = 0;
 
+  // Lista com imagens para display
   final List<String> offersImages = [
     './images/home_banner/banner_tv.png',
     './images/home_banner/banner_setup.png',
